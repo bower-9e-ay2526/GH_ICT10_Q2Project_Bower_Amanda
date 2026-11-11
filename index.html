@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Showcase 2026</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fff9ed;
+            color: #59432e;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        /* NAVIGATION BAR */
+
+        nav {
+            background-color: #ffe8ad;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 2px solid #f3cf79;
+        }
+
+        nav a {
+            color: #59432e;
+            text-decoration: none;
+            margin: 12px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c18b32;
+        }
+
+        /* HEADER */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 35px;
+            background-color: #fff3d5;
+        }
+
+        header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 55px;
+            color: #694b2e;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #a77b3f;
+            font-weight: 700;
+        }
+
+        .star {
+            color: #e9b84f;
+        }
+
+        /* MAIN CONTENT */
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 2px solid #f3d48c;
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 5px 6px 0px #f5e5c4;
+        }
+
+        .card h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 30px;
+            color: #765633;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* ABOUT ME */
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 250px;
+        }
+
+        .about-decoration {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            background-color: #fff2d0;
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        .about-decoration .big-icon {
+            font-size: 65px;
+        }
+
+        .about-decoration p {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            color: #8a6538;
+        }
+
+        .quote {
+            background-color: #ffedbd;
+            padding: 18px;
+            border-radius: 15px;
+            text-align: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+            color: #765633;
+            margin-top: 20px;
+        }
+
+        /* PROJECT BUTTONS */
+
+        .project-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ffe6a5;
+            border: 2px solid #e9c46b;
+            color: #59432e;
+            padding: 15px 22px;
+            border-radius: 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f6d27c;
+            transform: translateY(-3px);
+        }
+
+        #output {
+            background-color: #fff8e9;
+            border: 1px dashed #dfbd70;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 25px;
+            min-height: 65px;
+        }
+
+        #output a {
+            color: #a47736;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        #output a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #ffe8ad;
+            text-align: center;
+            padding: 22px;
+            color: #765633;
+            font-size: 13px;
+            border-top: 2px solid #f3cf79;
+        }
+
+        /* SMALL SCREENS */
+
+        @media screen and (max-width: 600px) {
+            header h1 {
+                font-size: 38px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav>
+        <a href="../index.html">⌂ Home</a>
+        <a href="../SW1/sw.html">✦ Seatwork 1</a>
+        <a href="../SKILLSTEST/skills.html">✿ Skills Test</a>
+        <a href="../DRILL2/drill.html">♡ Drill 2</a>
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>Meet the Creator! <span class="star">✦</span></h1>
+        <p>DREAM • CREATE • ACHIEVE ♡</p>
+    </header>
+
+
+    <div class="container">
+
+        <!-- ABOUT ME SECTION -->
+
+        <div class="card">
+
+            <h2>About Me ♡</h2>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p>
+                        I am <b>Amanda Cassiddy Bower</b>.
+                        These are my works for the year!
+                    </p>
+
+                    <p>
+                        I am interested in artworks, photography,
+                        music, and fashion.
+                    </p>
+
+                    <p>
+                        My hobbies are singing, art, playing the guitar,
+                        baking, and mixing and matching clothes in a
+                        unique way. In my free time, I also create
+                        content that makes use of my interests.
+                    </p>
+
+                    <p>
+                        My dream is to become a Singer Songwriter,
+                        while also pursuing a career as a nurse or
+                        an Aesthetic Doctor in the future.
+                    </p>
+
+                </div>
+
+                <div class="about-decoration">
+                    <div class="big-icon">🎀</div>
+                    <p>Dream big, stay creative!</p>
+                    <div>♪ ✧ ♡ ✧ ♪</div>
+                </div>
+
+            </div>
+
+            <div class="quote">
+                "It's all in God's perfect timing,
+                don't force it if it's not for you." ♡
+            </div>
+
+        </div>
+
+
+        <!-- ICT PROJECTS SECTION -->
+
+        <div class="card">
+
+            <h2>My ICT Projects ♡</h2>
+
+            <p>
+                A little collection of my work throughout the year!
+                Explore my projects below.
+            </p>
+
+            <div class="project-buttons">
+
+                <button py-click="show_sw">
+                    💻 Seatwork 1
+                </button>
+
+                <button py-click="show_skills">
+                    🧪 Skills Test
+                </button>
+
+                <button py-click="show_drill">
+                    👥 Drill 2
+                </button>
+
+            </div>
+
+            <div id="output">
+                <p>✦ Click a button to learn more about my projects!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Amanda Cassiddy Bower | ICT Portfolio ♡
+        <br>
+        Made with creativity and a little sunshine ☀
+    </footer>
+
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
